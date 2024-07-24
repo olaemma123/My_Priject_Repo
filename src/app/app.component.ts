@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -14,4 +14,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 })
 export class AppComponent {
   title = 'class-app';
+
+  @Output() MessageFromParent : string = "CORE COMPONENT"
+  @Output() MessageLFromParent : string = "Pls enter correct email"
+  @Output() MessagePFromParent : string = "Pls enter correct Password"
 }

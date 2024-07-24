@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-welcome',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './welcome.component.scss'
 })
 export class WelcomeComponent {
+
+  HelloMessage : string =  "Welcome to my App Practice"
+
+  @Input() someMessage : string = ''
 
 }

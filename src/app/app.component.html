@@ -1,8 +1,11 @@
 
 <div class="container">
-<app-welcome></app-welcome>
-<app-login></app-login>
+<app-welcome [someMessage]="MessageFromParent"></app-welcome>
+
+<app-login [Loginmessage] = "MessageLFromParent" [LoginPmessage] = "MessagePFromParent"></app-login>
+
 <app-register></app-register>
+
 <router-outlet />
 
 </div>
