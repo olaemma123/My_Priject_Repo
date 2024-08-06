@@ -2,7 +2,20 @@
 <div class="container">
 <app-welcome [someMessage]="MessageFromParent"></app-welcome>
 
-<app-login [Loginmessage] = "MessageLFromParent" [LoginPmessage] = "MessagePFromParent"></app-login>
+<app-login 
+[Loginmessage] = "MessageLFromParent" 
+[LoginPmessage] = "MessagePFromParent"
+(messageEvent)="onMessageRecieve($event)">
+</app-login>
+
+<h1>{{recievingMessage}}</h1>
+
+<app-customer (messageEvent)="onMessageReceieced($event)"></app-customer>
+
+<h1>{{onClientRecieveMessage}}</h1>
+<app-login></app-login>
+
+<app-retail></app-retail>
 
 <app-register></app-register>
 

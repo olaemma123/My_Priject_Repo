@@ -1,7 +1,7 @@
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -16,5 +16,12 @@ export class LoginComponent {
   @Input() Passwd : string = 'Password'
 @Input() Loginmessage : string = ''
 @Input() LoginPmessage : string = ''
+
+@Output() messageEvent = new EventEmitter<string>()
+
+  sendMessage(){
+    this.messageEvent.emit("Transfering Data C2P")
+  }
+
 
 }
